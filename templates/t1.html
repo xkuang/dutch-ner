@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dutch NER service</title>
+    <style>
+       
+
+        .head {
+            font-size: 20px;
+            color: #2a63c8;
+            padding: 7px;
+        }
+
+        a {
+            color: #2a63c8;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+ 
+<div class="head"> NER service</div>
+<p style="margin: 60px 0 0 0;">
+    This named entity recognition service for Dutch is based on <a href="https://en.wikipedia.org/wiki/Conditional_random_field" target="_blank">conditional
+    random fields</a>
+    and other machine learning techniques.
+</p>
+<p>For now the training is based on the fairly standard CoNLL 2002 corpus but a more extensive training based on <a
+        href="http://tst-centrale.org/nl/tst-materialen/corpora/sonar-corpus-detail" target="_blank">the SoNaR v1.2</a> is on its way.
+</p>
+<p>
+    The REST service is very simple:
+
+</p>
+<div style="margin:10px; background-color: silver; padding:10px;">
+    /ner/[your sentence]
+</div>
+<p>
+    For instance, the sentence
+</p>
+<div style="margin:10px; background-color: silver; padding:10px;">
+    <a  target="_blank" href="/ner/Jochim%20Bloemental%20is%20op%20weg%20naar%20Utrecht%20aangevallen%20door%20een%20bende%20holigans%20van%20Microsoft.">Jochim
+        Bloemental is op weg naar Utrecht aangevallen door een bende holigans van Microsoft.</a>
+</div>
+<p>
+    will return the named entities:
+<ul>
+    <li>Joachim Bloemental: Person</li>
+    <li>Utrecht: Location</li>
+    <li>Microsoft: Organization</li>
+</ul>
+</p>
+{{ content }}
+{# a comment #}
+</body>
+</html>

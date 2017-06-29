@@ -1,0 +1,6 @@
+Flask==0.12.2
+numpy
+scipy
+scikit-learn
+sklearn-crfsuite
+nltk
